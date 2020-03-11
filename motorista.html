@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    alert("Bem-vindo ao aplicativo do DETRAN para saber se você pode dirigir")
+    var idade = parseInt(prompt("Qual é sua idade?"));
+
+    if (idade <= 17) {
+    }
+
+    if (idade >= 18) {
+        var temCarteira = prompt("Tem carteira? Responda sim ou não");
+    }
+
+
+    if (idade >= 18 && temCarteira == "sim") {
+    	mostra("Pode dirigir")
+    } else {
+    	mostra("Não pode dirigir")
+    }
+
+</script>
