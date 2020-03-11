@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+
+        document.write(frase);
+        document.write("<br>");
+}
+
+alert("Bem-vindo ao jogo da adivinhação. Tente adivinhar o número que o seu computador está pensando")
+var numeroCerto = Math.round(Math.random() * 10);
+var numeroChutado = parseInt(prompt("Escolha um número de 1 a 10"));
+document.write("O número certo é: " + numeroCerto);
+
+if (numeroCerto == numeroChutado) {
+	pulaLinha();
+	mostra("Parabéns, você acertou o número.")
+}   else {
+	    pulaLinha();
+		mostra("Você errou")
+}
+
+</script>
