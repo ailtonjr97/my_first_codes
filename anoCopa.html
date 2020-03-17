@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br>")
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+
+var primAnoCopa = 1930;
+var usuLimite = parseInt(prompt("Digite até quando você quer sabe que teve copa."))
+
+
+while(primAnoCopa <= usuLimite){
+	mostra("Teve copa em " + primAnoCopa);
+	primAnoCopa = primAnoCopa + 4;
+}
+
+
+</script>
