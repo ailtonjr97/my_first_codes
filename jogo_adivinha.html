@@ -1,30 +1,33 @@
 <meta charset="UTF-8">
 
 <script>
+	function pulaLinha() {
+		document.write("<br>")
+	}
 
-    function pulaLinha() {
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
 
-        document.write("<br>");
-        document.write("<br>");
-}
+	function sorteia(n) {
+		return n = (Math.round(Math.random() * n));
+	}
 
-    function mostra(frase) {
 
-        document.write(frase);
-        document.write("<br>");
-}
+var numeroChutado = parseInt(prompt("Chute um número, o computador irá tentar adivinhar."));
+var numeroPensado = sorteia(100);
 
-alert("Bem-vindo ao jogo da adivinhação. Tente adivinhar o número que o seu computador está pensando")
-var numeroCerto = Math.round(Math.random() * 10);
-var numeroChutado = parseInt(prompt("Escolha um número de 1 a 10"));
-document.write("O número certo é: " + numeroCerto);
-
-if (numeroCerto == numeroChutado) {
+if (numeroChutado == numeroPensado) {
+	mostra("Parabéns, você acertou! Porque pensei no número: " + numeroPensado);
 	pulaLinha();
-	mostra("Parabéns, você acertou o número.")
-}   else {
-	    pulaLinha();
-		mostra("Você errou")
+	mostra("Caso queria jogar novamente, recarregue a página.")
+} else {
+	if ( numeroChutado > numeroPensado) {
+		mostra("Você errou. O número que pensei é menor do que o número que você chutou")
+	} else{
+		mostra("Você errou. O número que pensei é maior do que o número que você chutou")
+	}
 }
 
 </script>
